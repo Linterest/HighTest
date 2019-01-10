@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="requestFullscreen " content="yes">
+    <title>金融人高考试题</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .index {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/img-1.jpg');
+            background-size: 100% 100%;
+            z-index: 10;
+        }
+
+        .user {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/img-2.jpg');
+            background-size: 100% 100%;
+            z-index: 9;
+        }
+
+        .usercontent {
+            margin-top: 65%;
+            overflow: hidden;
+            color: #757575;
+        }
+
+        .usercontent div {
+            width: 80%;
+            margin: 0.5rem auto;
+            position: relative;
+            overflow: hidden;
+            font-size: 0.8rem;
+        }
+
+        .usercontent .userImg {
+
+            float: right;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50% 50%;
+            border: 1px solid black;
+        }
+
+        .usercontent input {
+            height: 1rem;
+            width: 60%;
+            font-size: 0.8rem;
+            border: 0;
+            background-color: rgba(0, 0, 0, 0);
+            color: #757575;
+        }
+
+        .usercontent .btndiv {
+            overflow: hidden;
+            margin-top: 2.8rem;
+        }
+
+        .userbtn {
+            float: right;
+            width: 4rem;
+            height: 2rem;
+            color: red;
+        }
+
+        .answer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/img-3.jpg');
+            background-size: 100% 100%;
+            z-index: 8;
+        }
+
+        .subject {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 25%;
+            color: #757575;
+            font-size: 0.8rem;
+
+
+        }
+
+        .subject p {
+            text-align: center;
+        }
+
+        .subject ul {
+            padding: 0;
+            margin-left: 1.5rem;
+        }
+
+        .subject ul li {
+            list-style: upper-alpha;
+            margin-top: 0.5rem;
+        }
+
+        .key {
+            margin: 0 auto;
+            margin-top: 35%;
+            width: 80%;
+            color: #bd0000;
+        }
+
+        .key ul {
+            padding: 0;
+            overflow: hidden;
+            margin-left: 0.5rem;
+        }
+
+        .key ul li {
+            list-style: none;
+            float: left;
+            width: 3rem;
+            height: 1.5rem;
+            border: 1px solid #bd0000;
+            margin-right: 1rem;
+            text-align: center;
+            line-height: 1.5rem;
+            color: #bd0000
+        }
+
+        .title {
+            width: 100%;
+            height: 4.5rem;
+        }
+
+        .wait {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/img-4.jpg');
+            background-size: 100% 100%;
+            z-index: 7;
+        }
+
+        .score {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/img-5.jpg');
+            background-size: 100% 100%;
+            z-index: 6;
+        }
+
+        .score .usercontent {
+            margin-top: 45%;
+        }
+
+        .score .snumber {
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .fx {
+            overflow: hidden;
+        }
+
+        .score .fx div {
+            float: left;
+            width: 65%;
+        }
+
+        .score .fx .ewm {
+            width: 4rem;
+            height: 4rem;
+
+            background-size: 100% 100%;
+        }
+
+        .score .fx div .gk {
+            font-size: 0.7rem;
+        }
+
+        .scorenumber {
+            color: red;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="index"></div>
+        <div class="user">
+            <div class="usercontent">
+                <div>
+                    <img class="userImg" src="">
+                </div>
+                <div>
+                    <span>考生姓名:</span>
+                    <input type="text" class="userName" value="访问人昵称" readonly>
+                </div>
+                <div>
+                    <span>准考证号:</span>
+                    <input type="text" class="userCode" value="20180606" readonly>
+                </div>
+                <div class="btndiv">
+                    <button class="userbtn">提交信息</button>
+                </div>
+            </div>
+        </div>
+        <div class="answer">
+            <div class="subject">
+                <p>选择题（共10题）</p>
+                <div class="title">1.风险与收益成（）</div>
+                <ul>
+                    <li>A.正比</li>
+                    <li>B.反比</li>
+                    <li>C.逗比</li>
+                </ul>
+            </div>
+            <div class="key">
+                <p class="keyNumber"></p>
+                <ul>
+                    <li value="A">A</li>
+                    <li value="B">B</li>
+                    <li value="C">C</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wait"></div>
+        <div class="score">
+            <div class="usercontent">
+                <div>
+                    <img class="userImg" src="">
+                </div>
+                <div>
+                    <span>考生姓名:</span>
+                    <input type="text" class="userName" value="访问人昵称" readonly>
+                </div>
+                <div>
+                    <span>准考证号:</span>
+                    <input type="text" class="userCode" value="20180606" readonly>
+                </div>
+                <div class="snumber">
+                    <span>你的分数是:</span>
+                    <span class="scorenumber"></span>
+                    <span>分</span>
+                </div>
+                <div class="fx">
+                    <p>截图分享朋友圈,晒晒你的成绩吧!</p>
+                    <div class="ewm">
+                        <img src="img/ewm.jpg" style="width:100%" />
+                    </div>
+                    <div>
+                        <p>长按识别二维码</p>
+                        <p class="gk">回复「高考」,即可做题</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/reset.js"></script>
+    <script src="./js/jquery-1.10.2.min.js"></script>
+    <script>
+
+        $(function () {
+            var userData = { nickname: decodeURI(getQueryString("nickname")), headimg: getQueryString("headimg"), score: getQueryString("usercount") };
+            $(".userImg").attr("src", userData.headimg);
+            $(".userName").val(userData.nickname);
+            $('.index').on('touchstart', function (e) {
+                e.preventDefault();
+                var startX = e.originalEvent.changedTouches[0].pageX;
+                var startY = e.originalEvent.changedTouches[0].pageY;
+                $(document).on('touchmove', function (e) {
+                    e.preventDefault();
+                    var moveEndX = e.originalEvent.changedTouches[0].pageX;
+                    var moveEndY = e.originalEvent.changedTouches[0].pageY;
+                    X = moveEndX - startX;
+                    Y = moveEndY - startY;
+                    if (X <= -100) {
+
+                        $('.index').animate({ left: '-500px' }, 'slow').hide('1000');
+                    }
+                })
+            })
+            $('.userbtn').on('touchstart', function () {
+                $('.user').fadeOut();
+            })
+            var keyNumber = 0;
+            var data = [{
+                title: "风险与收益成（）",
+                list: [{ conten: "正比" }, { conten: "反比" }, { conten: "逗比" }]
+            }, {
+                title: "2016年英国公投“脱欧”，24日公布结果后英镑（）",
+                list: [{ conten: "微幅波动" }, { conten: "大涨" }, { conten: "大跌" }]
+            }, {
+                title: "以下哪个是避险产品",
+                list: [{ conten: "A股" }, { conten: "黄金" }, { conten: "人民币" }]
+            },
+            {
+                title: "中国人民银行现任行长是（）",
+                list: [{ conten: "周小川" }, { conten: "易纲" }, { conten: "戴相龙" }]
+            },
+            {
+                title: "2018年6月1日，（）只A股正式被纳入MSCI指数体系",
+                list: [{ conten: "234" }, { conten: "216" }, { conten: "226" },]
+            }, {
+                title: "下列哪个不是期货交易所",
+                list: [{ conten: "深圳期货交易所" }, { conten: "郑州商品交易所" }, { conten: "大连商品交易所" },]
+            }, {
+                title: "小米赴港上市，并以CDR形式在内地上市，CDR是指（）",
+                list: [{ conten: "境外存托凭证" }, { conten: "中国存托凭证" }, { conten: "境内存托凭证" },]
+            }, {
+                title: "购买私募基金的最低金额是（）",
+                list: [{ conten: "100万" }, { conten: "200万" }, { conten: "150万" },]
+            }, {
+                title: "最近A股市场跌的板块是（）",
+                list: [{ conten: "医药板块" }, { conten: "酒业板块" }, { conten: "影视板块" },]
+            }, {
+                title: "川普在“特金会”事件上“变脸”几次",
+                list: [{ conten: "1次" }, { conten: "2次" }, { conten: "3次" },]
+            }];
+
+            $('.title').text(keyNumber + 1 + '.' + data[keyNumber].title);
+            data[keyNumber].list.forEach(function (val, index) {
+                $('.subject ul li').eq(index).text(val.conten);
+            });
+            $('.keyNumber').text('第' + Number(keyNumber + 1) + '题');
+            //用户答案
+            var keydata = [];
+            var turedata = [0, 2, 1, 1, 2, 0, 1, 0, 2, 1];
+            var usercount = 0;
+            //点击下一道题
+            $('.key ul li').on('touchend', function () {
+                $index = $(this).index();
+                //用户答案
+                keydata[keyNumber] = $index;
+                keyNumber++;
+                keydata[keyNumber] = $index;
+                if (keyNumber < data.length) {
+
+                    $('.title').text(keyNumber + 1 + '.' + data[keyNumber].title);
+                    data[keyNumber].list.forEach(function (val, index) {
+                        $('.subject ul li').eq(index).text(val.conten);
+                    });
+                    $('.keyNumber').text('第' + Number(keyNumber + 1) + '题');
+
+                } else {
+                    $('.answer').hide();
+                    setTimeout(function () {
+                        $('.wait').fadeOut();
+                    }, 1000);
+                    keydata.forEach(function (val, index) {
+                        if (turedata[index] == val) {
+                            usercount += 10;
+                        }
+                    })
+                    $('.scorenumber').text(usercount);
+                    console.log(usercount);
+
+                }
+
+            })
+            $('.scorenumber').text(usercount);
+
+
+        })
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = decodeURI(window.location.search).substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+
+        function submit() {
+
+            // var formData = { nickname: getQueryString(nickname), headimg: getQueryString(headimg), score: getQueryString(usercount) };
+
+        }
+    </script>
+</body>
+
+</html>
